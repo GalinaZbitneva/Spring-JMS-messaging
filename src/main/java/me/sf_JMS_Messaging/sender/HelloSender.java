@@ -18,6 +18,8 @@ public class HelloSender {
     private final JmsTemplate jmsTemplate;
 
     //fixedRate = 2000 ml seconds   это 2 секунды
+
+
     @Scheduled(fixedRate = 2000)
     public void sendMessage(){
 
