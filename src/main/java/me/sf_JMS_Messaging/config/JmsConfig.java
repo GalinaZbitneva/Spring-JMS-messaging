@@ -3,6 +3,9 @@ package me.sf_JMS_Messaging.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import org.springframework.jms.support.converter.MessageConverter;
+import org.springframework.jms.support.converter.MessageType;
 import org.springframework.messaging.converter.JacksonJsonMessageConverter;
 import org.springframework.util.MimeTypeUtils;
 import tools.jackson.databind.DefaultTyping;
@@ -15,7 +18,14 @@ import tools.jackson.databind.jsontype.DefaultBaseTypeLimitingValidator;
 public class JmsConfig {
 
     public final static String MY_QUEUE = "my-hello-world";
+    public final static String MY_SEND_RCV_QUEUE = "receive-queue";
 
+
+
+
+
+@Bean
+    public JacksonJsonMessageConverter messageConverter(){
     // 1. Создаем маппер
     JsonMapper mapper = JsonMapper.builder()
             .activateDefaultTypingAsProperty(
@@ -24,16 +34,10 @@ public class JmsConfig {
                     "_type" // ВОТ ОНО! Третий аргумент заменяет setTypeIdPropertyName
             )
             .build();
-
-
-
-
-@Bean
-    public JacksonJsonMessageConverter messageConverter(){
-
         JacksonJsonMessageConverter converter = new JacksonJsonMessageConverter(mapper);
         converter.setContentTypeResolver(message -> MimeTypeUtils.APPLICATION_JSON);
         return converter;
 
     }
+
 }

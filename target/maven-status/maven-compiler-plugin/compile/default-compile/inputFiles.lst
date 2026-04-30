@@ -1,0 +1,6 @@
+/Users/galinazbitneva/Documents/JAVA_projects/JMS_Messaging/Spring-JMS-messaging/src/main/java/me/sf_JMS_Messaging/SfJmsMessagingApplication.java
+/Users/galinazbitneva/Documents/JAVA_projects/JMS_Messaging/Spring-JMS-messaging/src/main/java/me/sf_JMS_Messaging/config/JmsConfig.java
+/Users/galinazbitneva/Documents/JAVA_projects/JMS_Messaging/Spring-JMS-messaging/src/main/java/me/sf_JMS_Messaging/config/TaskConfig.java
+/Users/galinazbitneva/Documents/JAVA_projects/JMS_Messaging/Spring-JMS-messaging/src/main/java/me/sf_JMS_Messaging/listener/HelloMessageListener.java
+/Users/galinazbitneva/Documents/JAVA_projects/JMS_Messaging/Spring-JMS-messaging/src/main/java/me/sf_JMS_Messaging/model/HelloWorldMessage.java
+/Users/galinazbitneva/Documents/JAVA_projects/JMS_Messaging/Spring-JMS-messaging/src/main/java/me/sf_JMS_Messaging/sender/HelloSender.java
